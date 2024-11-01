@@ -1,0 +1,26 @@
+
+mat-card {
+    width: 450px;
+    max-width: 900px;
+    margin: 10% auto;
+    text-align: center;
+}
+
+mat-card-header {
+    justify-content: center;
+}
+
+mat-form-field {
+    display: block;
+    }
+    
+    .card-title {
+    color: #646464;
+    }
+    
+    :host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    }
+    

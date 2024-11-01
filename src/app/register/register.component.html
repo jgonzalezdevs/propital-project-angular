@@ -1,0 +1,39 @@
+<mat-card>
+    <mat-card-header>
+        <img src="https://cdn-icons-png.freepik.com/256/6645/6645221.png?semt=ais_hybrid" alt="">
+    </mat-card-header>
+    <mat-card-content>
+        <form #loginForm="ngForm" (submit)="register()">
+            <h4 class="card-title">Propital Register</h4>
+            <mat-error *ngIf="!loginValid">
+                El usuario y contraseña no son correctos!.
+            </mat-error>
+            <mat-form-field>
+                <mat-label>Usuario</mat-label>
+                <input matInput placeholder="Usuario" [(ngModel)]="user" name="username" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Contraseña</mat-label>
+                <input matInput type="password" placeholder="Contraseña" [(ngModel)]="password" name="password"
+                    required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Correo Electronico</mat-label>
+                <input matInput type="email" placeholder="Correo" [(ngModel)]="email" name="email"
+                    required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Nombre</mat-label>
+                <input matInput type="text" placeholder="Nombre" [(ngModel)]="firstName" name="first_name"
+                    required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Apellido</mat-label>
+                <input matInput type="text" placeholder="Apellido" [(ngModel)]="lastName" name="last_name"
+                    required>
+            </mat-form-field>
+            <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid">Login</button>
+        </form>
+    </mat-card-content>
+  </mat-card>
+  

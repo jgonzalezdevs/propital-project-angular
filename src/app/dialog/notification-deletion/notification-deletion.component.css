@@ -1,0 +1,11 @@
+button {
+    margin-right: 8px;
+  }
+.delete-accept {
+    background-color: red;
+    color: #fff !important;
+}
+.delete-cancel {
+    background-color: rgb(108,117,125);
+    color: #fff !important;
+}

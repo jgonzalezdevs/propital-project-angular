@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-header class="d-flex justify-content-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/3177/3177336.png" alt="" style="max-width: 300px;">
+    </mat-card-header>
+    <mat-card-content>
+        <form #notificationRegisterValid="ngForm" (submit)="register()">
+            <h4 class="card-title">Notification Register</h4>
+            <mat-error *ngIf="!registerValid">
+                Error en el registro de notificaciones!.
+            </mat-error>
+            <mat-form-field class="p-1">
+                <mat-label>Tipo de Alerta</mat-label>
+                <select matNativeControl required [(ngModel)]="type" name="type">
+                  <option value="ALERT">Alerta</option>
+                  <option value="WARNING">Peligro</option>
+                  <option value="INFO">Informacion</option>
+                </select>
+            </mat-form-field>
+            <mat-form-field class="p-1">
+                <mat-label>Titulo</mat-label>
+                <input matInput type="text" placeholder="Titulo" [(ngModel)]="title" name="title"
+                    required>
+            </mat-form-field>
+            <mat-form-field class="p-1">
+                <mat-label>Contenido</mat-label>
+                <input matInput type="text" placeholder="Contenido" [(ngModel)]="content" name="content"
+                    required>
+            </mat-form-field>
+            <button mat-raised-button color="primary" [disabled]="!notificationRegisterValid.form.valid">Registrar</button>
+        </form>
+    </mat-card-content>
+  </mat-card>
